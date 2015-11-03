@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.2.3
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: dMx3p5VeiJV+lRNs6WfgD3EX+JGSISG+dBbYP25O7y6rDJHrTXN8zIVRMu8ekI0lllN92zE4K1XhcXL/3EZO9lmcvxsIsrAiyYWx/wPLUwGy4rOiogAb19U9TouARZf1vCKfyk93FnhRg4fIBHD1Ls2VBUAhoGTFs9CqEnSNbbT7u3HaOamUGY0B2zqA2DyylUWvGJIlQIpbwKG0h8lkxamMAsHRZ6jruOymGHvVpfE6m3hxdvipDzE+tG0F/cfr06w4VrMOlyV2NGp0WgKOWAyDEu0rb8rNxy+2DuCkflMjzlnZA2Z1eS3zLhfxEammapZ+pSfFPljCQUtKsSMt5yfDZ8fBNmc3PvOOnvTj0wFOVD65uMsp8LZIWR2lgs+QkO0IUNVevYG58tTOn65fHUh5MfhNHtmDoGjkjMbkRjxMu6zl524WZmPYJ6ZDTknIkzx4gBiK/jZPUd78S0nqUJ3QaRva0VfJPPT98L4r6z4o1s3Wdf6PI+yTasohRi0IQcdj5MQKUN/9dpjFIES0heLYqgZKXdZPRElysgMR/1Ra0NfFGSsyqqDbma38jJqsHBS3S2Xu/JP/JQsskTW16ipj0qXaka7c+9/MFmHJa4MnigfL8bhdX6DDT7GRJWIa41Nq2pkVbCmbpM5I3Q1C+Qcd9EgPG4pMePITnLGal3A=
+  app: montrose-dishes
+  on:
+    repo: lacewaves/montrose-dishes
