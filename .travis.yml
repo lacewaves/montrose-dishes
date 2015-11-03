@@ -13,3 +13,6 @@ deploy:
   app: montrose-dishes
   on:
     repo: lacewaves/montrose-dishes
+  run:
+    - "rake db:migrate"
+    - "rake cleanup"
