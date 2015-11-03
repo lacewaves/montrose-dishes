@@ -13,3 +13,6 @@ deploy:
   app: still-mesa-4051
   on:
     repo: lacewaves/montrose-dishes
+  run:
+    - "rake db:migrate"
+    - "rake cleanup"
