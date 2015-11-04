@@ -19,13 +19,8 @@ ActiveRecord::Schema.define(version: 20151103182502) do
   create_table "dishes", force: :cascade do |t|
     t.string   "name"
     t.string   "cuisine"
+    t.string   "dish_type"
     t.integer  "upvotes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ingredients", force: :cascade do |t|
-    t.string   "name"
     t.boolean  "kosher"
     t.boolean  "halal"
     t.boolean  "meat"
@@ -37,7 +32,16 @@ ActiveRecord::Schema.define(version: 20151103182502) do
     t.boolean  "gluten"
     t.boolean  "nuts"
     t.boolean  "soy"
+    t.boolean  "spicy"
+    t.string   "restaurant"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name"
     t.string   "food_group"
+    t.string   "dishes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,10 +50,6 @@ ActiveRecord::Schema.define(version: 20151103182502) do
     t.string   "name"
     t.string   "placeId"
     t.string   "cuisine"
-    t.boolean  "kosher"
-    t.boolean  "halal"
-    t.boolean  "vegetarian"
-    t.boolean  "vegan"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

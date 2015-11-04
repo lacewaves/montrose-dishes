@@ -1,2 +1,87 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+.body-wrapper { margin:25px; padding:10px; }
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 420px;
+}
+
+.mdl-layout__title { padding-right:5px; }
+
+.map-placeholder { width:320px; height:320px; }
+
+.demo-card-square img { width:320px; height:320px; }
+
+.dishcontainer {
+  width:320px;
+  height:420px;
+  background-color:white;
+  padding:0;
+  z-index: 1; }
+
+.flip-button { position:relative;
+  float:right;
+  right:0px;
+  bottom:0px;
+  z-index: 5; }
+
+.flip-button:hover + .container .flipper {
+    transform: rotateY(180deg);
+  }
+
+.card-size {
+width: 320px;
+height: 420px;
+}
+
+.front, .back {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+    width:320px;
+    height:420px;
+  }
+
+  .container {
+    perspective: 1000px;
+    @extend .card-size;
+  }
+
+  .flipper {
+    	transition: 0.6s;
+    	transform-style: preserve-3d;
+    	position: relative;
+      width: 320px;
+      height: 420px;
+    }
+
+  .dishcontainer .front{
+  background-color: white;
+  @extend .card-size;
+  z-index: 2;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 420px;
+  width: 320px;
+  background-color: white;
+  z-index: 2;
+    }
+
+  .dishcontainer .back {
+  background-color: white;
+  @extend .card-size;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 420px;
+  width: 320px;
+  transform: rotateY(180deg);
+  }
+
+  .container:hover .back {
+         z-index: 6;
+       }

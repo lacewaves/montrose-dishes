@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'dishes#index'
+
+  get 'dishes/create'
+
+  get 'dishes/show'
+
+  get 'dishes/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
