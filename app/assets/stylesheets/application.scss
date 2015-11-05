@@ -1,4 +1,4 @@
-.body-wrapper { margin:25px; padding:10px; }
+.body-wrapper { margin:10px; padding:10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
 
 .demo-card-square.mdl-card {
   width: 320px;
@@ -15,13 +15,14 @@
   width:320px;
   height:420px;
   background-color:white;
-  padding:0;
+  padding:10px;
   z-index: 1; }
 
 .flip-button { position:relative;
   float:right;
   right:0px;
   bottom:0px;
+  padding:5px;
   z-index: 5; }
 
 .flip-button:hover + .container .flipper {
