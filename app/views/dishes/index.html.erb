@@ -1,50 +1,52 @@
-<% @dishes.each do |dish| %>
-
-<div class="dishcontainer">
-  <div class="flip-button">
-    <a class="flip-button-link">
-      <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="arrow">
-      <i class="material-icons">undo</i>
-      </button>
-    </a>
-  </div>
-    <div class="container">
-      <div class="flipper" id="flipper">
-        <div class="front">
-          <div class="demo-card-square mdl-card mdl-shadow--2dp">
-            <%= image_tag "spinachandfetapita.jpg" %>
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text"><%= dish.name %> - restaurant</h2>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                <i class="material-icons">favorite_border</i>
-              </button>
-              <%= dish.upvotes %>
+<% @dishes_collection.each do |dish| %>
+  <div class="dishcontainer">
+    <div class="flip-button">
+      <a class="flip-button-link">
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="arrow">
+        <i class="material-icons">undo</i>
+        </button>
+      </a>
+    </div>
+      <div class="container">
+        <div class="flipper" id="flipper">
+          <div class="front">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+              <%= image_tag "spinachandfetapita.jpg" %>
+              <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text"><%= dish.name %> - <%= dish.restaurant.name %></h2>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                  <i class="material-icons">favorite_border</i>
+                </button>
+                <%= dish.upvotes %>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="back">
-          <div class="demo-card-square mdl-card mdl-shadow--2dp">
-            <div class="map-placeholder">
-              MAP WILL GO HERE.
-            </div>
-            <div class="mdl-card__title mdl-card--expand">
-              <h2 class="mdl-card__title-text"><%= dish.name %> - restaurant</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              Ingredients list
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                <i class="material-icons">favorite_border</i>
-              </button>
-              <%= dish.upvotes %>
+          <div class="back">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+              <div class="map-placeholder">
+                <p>MAP WILL GO HERE.</p> <p>Google Maps PlaceID: <%= dish.restaurant.placeId %></p>
+              </div>
+              <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text"><%= dish.name %> - <%= dish.restaurant.name %></h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <ul>
+                  <% dish.ingredients.each do |i| %>
+                    <li><%= i.name %></li>
+                  <% end %>
+                </ul>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                  <i class="material-icons">favorite_border</i>
+                </button>
+                <%= dish.upvotes %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-</div>
-
+  </div>
 <% end %>

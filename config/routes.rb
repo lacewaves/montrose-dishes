@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  root 'dishes#index'
+  root 'dishes#index' #root_path
+    get 'dishes/new' => 'dishes#new', as: :new_dish
 
-  get 'dishes/create'
+    # create a dish
+    get 'dishes/:id' => 'dishes#detail', as: :dish
+    post 'dishes' => 'dishes#create'
 
-  get 'dishes/show'
+    #update a post
+    #show the form
+    get 'dishes/:id/edit' => 'dishes#edit'
+    #patch the form
+    patch 'dishes/:id' => 'post#update'
 
-  get 'dishes/new'
+  # delete 'dishes/:id' => 'dishes#delete'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

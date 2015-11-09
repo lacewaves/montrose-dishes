@@ -2,6 +2,7 @@ class CreateDishes < ActiveRecord::Migration
 
   def change
     create_table :dishes do |t|
+      t.belongs_to :restaurant, index:true
       t.string :name
       t.string :cuisine
       t.string :dish_type
@@ -18,7 +19,6 @@ class CreateDishes < ActiveRecord::Migration
       t.boolean :nuts
       t.boolean :soy
       t.boolean :spicy
-      t.string :restaurant
 
       t.timestamps null: false
     end
