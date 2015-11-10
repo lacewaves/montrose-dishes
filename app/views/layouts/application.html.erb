@@ -20,9 +20,12 @@
           <%= link_to new_dish_path, class: "mdl-navigation__link" do %>
             New Dish
           <% end %>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <%= link_to new_ingredient_path, class: "mdl-navigation__link" do %>
+            New Ingredient
+          <% end %>
+          <%= link_to new_restaurant_path, class: "mdl-navigation__link" do %>
+            New Restaurant
+          <% end %>
         </nav>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                     mdl-textfield--floating-label mdl-textfield--align-right">

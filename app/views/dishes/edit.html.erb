@@ -1,0 +1,10 @@
+<%= simple_form_for @dish  do |f| %>
+
+  <%= f.input :name, label: "Dish Name" %>
+  <%= f.input :cuisine, label: "Cuisine" %>
+  <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"] %>
+  <%= f.association :restaurant %>
+  <%= f.association :ingredients, as: :check_boxes %>
+  <%= f.submit "Update Dish" %> or <%= link_to 'Delete', "/dishes/#{@dish.id}", method: :delete, data: {confirm: "Are you sure?"} %>
+
+<% end %>

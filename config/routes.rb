@@ -10,7 +10,34 @@ Rails.application.routes.draw do
     #show the form
     get 'dishes/:id/edit' => 'dishes#edit'
     #patch the form
-    patch 'dishes/:id' => 'post#update'
+    patch 'dishes/:id' => 'dishes#update'
+
+    #new_ingredient path
+    get 'ingredient/new' => 'ingredient#new', as: :new_ingredient
+
+    #create an ingredient
+    get 'ingredient/:id' => 'ingredient#detail', as: :ingredient
+    post 'ingredient' => 'ingredient#create'
+
+    #update an ingredient
+    #show the form
+    get 'ingredient/:id/edit' => 'ingredient#edit'
+    #patch the form
+    patch 'ingredient/:id' => 'ingredient#update'
+
+
+    #new_restaurant path
+    get 'restaurant/new' => 'restaurant#new', as: :new_restaurant
+
+    #create an restaurant
+    get 'restaurant/:id' => 'restaurant#detail', as: :restaurant
+    post 'restaurant' => 'restaurant#create'
+
+    #update an restaurant
+    #show the form
+    get 'restaurant/:id/edit' => 'restaurant#edit'
+    #patch the form
+    patch 'restaurant/:id' => 'restaurant#update'
 
   # delete 'dishes/:id' => 'dishes#delete'
 

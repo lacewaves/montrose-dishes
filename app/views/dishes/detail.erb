@@ -1,11 +1,11 @@
-<div class="posts">
-  <%= link_to 'Edit this Post', "/post/#{@post.id}/edit" %>
+<%= link_to 'Edit this Dish', "/dishes/#{@dish.id}/edit" %>
 
-<div class="post">
-  <h1><%= @post.title %></h1>
+  <h1><%= @dish.name %></h1>
 
-  <p><%= @post.body %></p>
+  <p><%= @dish.cuisine %></p>
 
+  <p><%= @dish.restaurant.name %></p>
 
-</div>
-</div>
+  <p><%= @dish.dish_type %></p>
+
+  <p><%= @dish.upvotes %></p>

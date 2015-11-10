@@ -1,2 +1,10 @@
-<h1>Dishes#new</h1>
-<p>Find me in app/views/dishes/new.html.erb</p>
+<%= simple_form_for @dish  do |f| %>
+
+  <%= f.input :name, label: "Dish Name" %>
+  <%= f.input :cuisine, label: "Cuisine" %>
+  <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"] %>
+  <%= f.association :restaurant %>
+  <%= f.association :ingredients, as: :check_boxes %>
+  <%= f.submit "Create Dish" %>
+
+<% end %>

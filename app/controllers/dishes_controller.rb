@@ -9,10 +9,11 @@ class DishesController < ApplicationController
 
   def new
     @dish = Dish.new
+    @restaurants = Restaurant.all
   end
 
   def create
-    @dish = Dish.new params.require(:dish).permit(:name, :cuisine, :type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy)
+    @dish = Dish.new params.require(:dish).permit(:restaurant_id, :name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :ingredient_ids => [])
     if @dish.save
       redirect_to root_path
     else
@@ -26,7 +27,7 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find params[:id]
-    if @dish.update params.require(:dish).permit(:name, :cuisine, :type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy)
+    if @dish.update params.require(:dish).permit(:name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :ingredient_ids => [])
       redirect_to root_path
     else
       render :edit
