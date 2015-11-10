@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
     #create an ingredient
     get 'ingredient/:id' => 'ingredient#detail', as: :ingredient
-    post 'ingredient' => 'ingredient#create'
+    post 'ingredients' => 'ingredient#create'
 
     #update an ingredient
     #show the form
@@ -25,13 +25,12 @@ Rails.application.routes.draw do
     #patch the form
     patch 'ingredient/:id' => 'ingredient#update'
 
-
     #new_restaurant path
     get 'restaurant/new' => 'restaurant#new', as: :new_restaurant
 
     #create an restaurant
     get 'restaurant/:id' => 'restaurant#detail', as: :restaurant
-    post 'restaurant' => 'restaurant#create'
+    post 'restaurants' => 'restaurant#create'
 
     #update an restaurant
     #show the form

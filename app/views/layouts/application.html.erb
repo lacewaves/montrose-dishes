@@ -14,7 +14,7 @@
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <img class="mdl-layout-icon"></img>
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout__title"><h4>Dishes in Montrose</h4></span>
+        <span class="mdl-layout__title"><h4><%= link_to root_path do %>Dishes in Montrose<% end %></h4></span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
           <%= link_to new_dish_path, class: "mdl-navigation__link" do %>

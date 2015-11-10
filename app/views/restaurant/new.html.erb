@@ -1,2 +1,9 @@
-<h1>Restaurant#new</h1>
-<p>Find me in app/views/restaurant/new.html.erb</p>
+<%= simple_form_for @restaurant do |f| %>
+
+  <%= f.input :name, label: "Restaurant Name" %>
+  <%= f.input :cuisine, label: "Cuisine?", as: :select, collection: ["Greek", "Italian", "American", "Appalachian", "Cajun", "Canadian", "Circus Clown", "Postal Service"] %>
+  <%= f.input :placeId, label: "Google Maps PlaceId?" %>
+  
+  <%= f.submit "Create Restaurant" %>
+
+<% end %>
