@@ -34,8 +34,11 @@
             <i class="material-icons">search</i>
           </label>
           <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" name="sample"
+            <%= form_tag root_path, method: :get do %>
+            <input class="mdl-textfield__input" type="text" name="search_text"
                    id="fixed-header-drawer-exp">
+
+             <% end %>
           </div>
         </div>
       </div>
