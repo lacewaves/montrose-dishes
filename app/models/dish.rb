@@ -3,6 +3,8 @@ class Dish < ActiveRecord::Base
   has_many :dish_ingredients
   belongs_to :restaurant
 
+  attachment :dish_image
+
   include PgSearch
 
   pg_search_scope :search,

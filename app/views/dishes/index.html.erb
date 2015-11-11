@@ -16,7 +16,7 @@
         <div class="flipper" id="flipper">
           <div class="front">
             <div class="demo-card-square mdl-card mdl-shadow--2dp">
-              <%= image_tag "spinachandfetapita.jpg", class: "front-card-image" %>
+              <%= image_tag attachment_url(dish, :dish_image, :fill, 320, 320, format: "jpg"), class: "front-card-image" %>
               <div class="mdl-card__title mdl-card--expand" id="front">
                 <h2 class="mdl-card__title-text" id="front">
                   <%= dish.name %><br><h2 id="restaurant-name-text-front" class="mdl-card__title-text"><%= dish.restaurant.name %></h2>

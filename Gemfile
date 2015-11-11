@@ -48,3 +48,6 @@ group :development do
 end
 
 gem 'simple_form'
+
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"

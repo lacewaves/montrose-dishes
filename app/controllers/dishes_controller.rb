@@ -17,7 +17,7 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new params.require(:dish).permit(:restaurant_id, :name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :ingredient_ids => [])
+    @dish = Dish.new params.require(:dish).permit(:restaurant_id, :name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :dish_image, :ingredient_ids => [])
     @dish.update_attribute(:upvotes, 0)
 
     if @dish.save
@@ -33,7 +33,7 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find params[:id]
-    if @dish.update params.require(:dish).permit(:name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :ingredient_ids => [])
+    if @dish.update params.require(:dish).permit(:name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :dish_image, :ingredient_ids => [])
       redirect_to root_path
     else
       render :edit

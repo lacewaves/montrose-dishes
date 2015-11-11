@@ -1,10 +1,16 @@
 <%= simple_form_for @dish  do |f| %>
 
-  <%= f.input :name, label: "Dish Name" %>
-  <%= f.input :cuisine, label: "Cuisine" %>
-  <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"] %>
-  <%= f.association :restaurant %>
-  <%= f.association :ingredients, as: :check_boxes %>
-  <%= f.submit "Update Dish" %> or <%= link_to 'Delete', "/dishes/#{@dish.id}", method: :delete, data: {confirm: "Are you sure?"} %>
+  <div class="mdl-textfield mdl-js-textfield">
+    <%= f.input :name, label: 'Dish Name', input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :cuisine, label: "Cuisine", input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"], input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.association :ingredients, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.attachment_field :dish_image, class: "mdl-textfield__input" %><br>
+    <div class="form-button-wrapper">
+      <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Update Dish
+      </button>
+    </div>
+  </div>
 
 <% end %>
