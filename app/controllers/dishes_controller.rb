@@ -40,6 +40,12 @@ class DishesController < ApplicationController
     redirect_to rooth_path
   end
 
+  def upvote
+    @dish = Dish.find params[:id]
+    @dish.update_attribute(:upvotes, @dish.upvotes + 1)
+    redirect_to(root_path)
+  end
+
 end
 
 #...For Posterity...

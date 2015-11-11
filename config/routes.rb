@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     get 'dishes/:id' => 'dishes#detail', as: :dish
     post 'dishes' => 'dishes#create'
 
+    #upvote a dish
+    post 'dishes/:id/upvote' => 'dishes#upvote', as: :upvote_dish
+
     #update a post
     #show the form
     get 'dishes/:id/edit' => 'dishes#edit'
