@@ -1,61 +1,83 @@
-.body-wrapper { margin:10px; padding:10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
+.body-wrapper {
+  margin:10px;
+  padding:10px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .demo-card-square.mdl-card {
   width: 320px;
-  height: 420px;
+  height: 475px;
 }
 
-.mdl-layout__title { padding-right:5px; }
+.mdl-layout__title {
+  padding-right:5px;
+}
 
-.map-placeholder { width:320px; height:320px; }
+.map-placeholder {
+  width:320px;
+  height:320px;
+}
 
-.demo-card-square img { width:320px; height:320px; }
+img.front-card-image {
+  width:320px;
+  height:320px;
+}
+
+.front-card-image {
+  overflow:hidden;
+}
 
 .dishcontainer {
   width:320px;
-  height:420px;
+  height:475px;
   background-color:white;
   padding:10px;
-  z-index: 1; }
+  z-index: 1;
+}
 
-.flip-button { position:relative;
+.flip-button {
+  position:relative;
   float:right;
   right:0px;
   bottom:0px;
   padding:5px;
-  z-index: 5; }
+  z-index: 5;
+}
 
 .flip-button:hover + .container .flipper {
-    transform: rotateY(180deg);
-  }
+  transform: rotateY(180deg);
+}
 
 .card-size {
-width: 320px;
-height: 420px;
+  width: 320px;
+  height: 475px;
 }
 
 .front, .back {
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-    width:320px;
-    height:420px;
+	position: absolute;
+	top: 0;
+	left: 0;
+  width:320px;
+  height:475px;
+}
+
+.container {
+  perspective: 1000px;
+  @extend .card-size;
+}
+
+.flipper {
+  	transition: 0.6s;
+  	transform-style: preserve-3d;
+  	position: relative;
+    width: 320px;
+    height: 475px;
   }
 
-  .container {
-    perspective: 1000px;
-    @extend .card-size;
-  }
-
-  .flipper {
-    	transition: 0.6s;
-    	transform-style: preserve-3d;
-    	position: relative;
-      width: 320px;
-      height: 420px;
-    }
-
-  .dishcontainer .front{
+.dishcontainer .front {
   background-color: white;
   @extend .card-size;
   z-index: 2;
@@ -64,13 +86,13 @@ height: 420px;
   position: absolute;
   top: 0;
   left: 0;
-  height: 420px;
+  height: 475px;
   width: 320px;
   background-color: white;
   z-index: 2;
-    }
+  }
 
-  .dishcontainer .back {
+.dishcontainer .back {
   background-color: white;
   @extend .card-size;
   backface-visibility: hidden;
@@ -78,32 +100,100 @@ height: 420px;
   top: 0;
   left: 0;
   background-color: white;
-  height: 420px;
+  height: 475px;
   width: 320px;
   transform: rotateY(180deg);
-  }
-
-  .container:hover .back {
-         z-index: 6;
-       }
-
-.mdl-card__supporting-text {
-  margin:0;
-}
-.mdl-card__supporting-text ul, li {
-  margin:0;
-  padding-left:8px;
-  padding-right:8px;
-  padding-top:2px;
-  padding-bottom:2px;
-  line-height:16px;
 }
 
-.mdl-card__title {
+.container:hover .back {
+   z-index: 6;
+}
+
+h2#front.mdl-card__title-text {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-right:4px;
+  font-size:28px;
+  overflow:hidden;
+  text-align:right;
+}
+
+#restaurant-name-text-front {
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-right:4px;
+  font-size:24px;
+  text-align: right;
+}
+
+h2#back.mdl-card__title-text {
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size:20px;
+  display:none;
+}
+
+#restaurant-name-text-back {
+  font-size:18px;
+  display:none;
+}
+
+div#front.mdl-card__title {
   padding-left:8px;
   padding-top:0px;
   padding-bottom:2px;
   padding-right:8px;
+  display:flex;
+  flex-direction: column;
+}
+
+div#back.mdl-card__title  {
+  padding-left:8px;
+  padding-top:0px;
+  padding-bottom:2px;
+  padding-right:8px;
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+
+div.mdl-card__title.mdl-card--expand {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left:8px;
+  padding-right:8px;
+}
+
+div.mdl-card__supporting-text {
+  margin:0;
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left:4px;
+  padding-right:4px;
+}
+
+div.mdl-card__supporting-text ul, li {
+  margin:0px;
+  padding-left:4px;
+  padding-right:4px;
+  padding-top:2px;
+  padding-bottom:2px;
+  line-height:16px;
+  font-size:16px;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+div.mdl-card__supporting-text li {
+  padding:4px;
+  margin:4px;
+  background-color: #448AFF;
+  color:#ffffff;
+  border-radius: 1px;
 }
 
 .mdl-layout__title a {
@@ -157,4 +247,11 @@ div.input.check_boxes.optional.dish_ingredients {
 
 .mdl-card__actions.mdl-card--border a {
   text-decoration: none;
+}
+
+div.mdl-card__actions.mdl-card--border {
+  padding-top:2px;
+  padding-bottom:2px;
+  margin-top:2px;
+  margin-bottom:2px;
 }

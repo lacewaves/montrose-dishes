@@ -1,6 +1,10 @@
 class DishesController < ApplicationController
   def index
     @dishes_collection = Dish.order("upvotes desc")
+
+    if params[:search_text].present?
+      @dishes_collection = @dishes_collection.search params[:search_text]
+    end
   end
 
   def detail
