@@ -5,6 +5,7 @@
     <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"], input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.association :restaurant, input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.association :ingredients, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.attachment_field :dish_image, class: "mdl-textfield__input" %><br>
     <div class="form-button-wrapper">
       <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         Create Dish
