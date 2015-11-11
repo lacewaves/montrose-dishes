@@ -18,6 +18,8 @@ class DishesController < ApplicationController
 
   def create
     @dish = Dish.new params.require(:dish).permit(:restaurant_id, :name, :cuisine, :dish_type, :kosher, :halal, :meat, :fish, :shellfish, :vegetarian, :vegan, :dairy, :gluten, :nuts, :soy, :spicy, :ingredient_ids => [])
+    @dish.update_attribute(:upvotes, 0)
+
     if @dish.save
       redirect_to root_path
     else
@@ -47,6 +49,7 @@ class DishesController < ApplicationController
   def upvote
     @dish = Dish.find params[:id]
     @dish.update_attribute(:upvotes, @dish.upvotes + 1)
+
     redirect_to(root_path)
   end
 
