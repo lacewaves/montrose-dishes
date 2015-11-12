@@ -45,7 +45,7 @@
               <div class="mdl-card__supporting-text">
                 <ul>
                   <% dish.ingredients.each do |i| %>
-                    <li><%= i.name %></li>
+                    <%= link_to root_path :search_text => i.name do %><li><%= i.name %></li> <% end %>
                   <% end %>
                 </ul>
               </div>
