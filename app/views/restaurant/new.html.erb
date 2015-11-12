@@ -3,13 +3,11 @@
     <%= f.input :name, label: "Restaurant Name", input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :cuisine, label: "Cuisine?", as: :select, collection: ["Greek", "Italian", "American", "Appalachian", "Cajun", "Canadian", "Circus Clown", "Postal Service"], input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :placeId, label: "Google Maps PlaceId?", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :latitude, label: "Google Maps Latitude?", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :longitude, label: "Google Maps Longitude?", input_html: {class: "mdl-textfield__input"} %><br>
     <div class="form-button-wrapper">
       <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         Create Restaurant
       </button>
     </div>
   </div>
-  
+
 <% end %>
