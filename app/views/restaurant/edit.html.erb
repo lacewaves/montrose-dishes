@@ -1,7 +1,7 @@
 <%= simple_form_for @restaurant do |f| %>
   <div class="mdl-textfield mdl-js-textfield">
     <%= f.input :name, label: "Restaurant Name", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :cuisine, label: "Cuisine?", as: :select, collection: ["Greek", "Italian", "American", "Appalachian", "Cajun", "Canadian", "Circus Clown", "Postal Service"], input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :cuisine, label: "Cuisine?", as: :select, collection: ["Greek", "Italian", "American", "Cajun", "Canadian", "Chinese", "Japanese", "Vietnamese", "Indian", "Thai", "French", "Belgian", "Circus Clown", "Postal Service"], input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :placeId, label: "Google Maps PlaceId?", input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :latitude, label: "Google Maps Latitude?", input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :longitude, label: "Google Maps Longitude?", input_html: {class: "mdl-textfield__input"} %><br>

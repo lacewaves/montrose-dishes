@@ -1,7 +1,7 @@
 <%= simple_form_for @ingredient do |f| %>
   <div class="mdl-textfield mdl-js-textfield">
     <%= f.input :name, label: "Ingredient Name", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :food_group, label: "Food group?", as: :select, collection: ["Dairy", "Fruit", "Vegetable", "Nuts", "Beans, Legumes", "Meat", "Shellfish", "Fish", "Confection", "Starch", "Water", "Alcohol"], input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :food_group, label: "Food group?", as: :select, collection: ["Dairy", "Fruit", "Vegetable", "Nuts", "Beans, Legumes", "Meat", "Shellfish", "Fish", "Confection", "Starch", "Water", "Alcohol", "Grain - gluten", "Grain - no gluten"], input_html: {class: "mdl-textfield__input"} %><br>
 
     <div class="form-button-wrapper">
       <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">

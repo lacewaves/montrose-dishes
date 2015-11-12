@@ -2,7 +2,7 @@
   <div class="mdl-textfield mdl-js-textfield">
     <%= f.input :name, label: 'Dish Name', input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :cuisine, label: "Cuisine", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Fun","Gross"], input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.association :restaurant, input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.association :ingredients, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.attachment_field :dish_image, class: "mdl-textfield__input" %><br>
