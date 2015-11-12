@@ -6,13 +6,11 @@
 <% @dishes_collection.each do |dish| %>
   <div class="dishcontainer">
     <div class="flip-button">
-      <a class="flip-button-link">
-        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="arrow">
+        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="flip-button" onclick="document.querySelector('#flip-toggle-<%= dish.id %>').classList.toggle('click');">
         <i class="material-icons">undo</i>
         </button>
-      </a>
     </div>
-      <div class="container">
+      <div class="container" id="flip-toggle-<%= dish.id %>">
         <div class="flipper" id="flipper">
           <div class="front">
             <div class="demo-card-square mdl-card mdl-shadow--2dp">

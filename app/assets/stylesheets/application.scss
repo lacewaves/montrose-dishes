@@ -47,7 +47,7 @@ img.front-card-image {
   z-index: 5;
 }
 
-.flip-button:hover + .container .flipper {
+.container.click .flipper, .container.flip .flipper  {
   transform: rotateY(180deg);
 }
 
