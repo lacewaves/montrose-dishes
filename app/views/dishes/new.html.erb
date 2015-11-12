@@ -1,11 +1,11 @@
 <%= simple_form_for @dish  do |f| %>
   <div class="mdl-textfield mdl-js-textfield">
-    <%= f.input :name, label: 'Dish Name', input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :cuisine, label: "Cuisine", input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :dish_type, label: "What kind of dish is it?", as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.association :restaurant, input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.association :ingredients, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.attachment_field :dish_image, class: "mdl-textfield__input" %><br>
+    <%= f.input :name, label: 'Dish Name', required: true, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :cuisine, label: "Cuisine", required: true, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.input :dish_type, label: "What kind of dish is it?", required: true, as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.association :restaurant, required: true, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.association :ingredients, required: true, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
+    <%= f.attachment_field :dish_image, required: true, class: "mdl-textfield__input" %><br>
     <div class="form-button-wrapper">
       <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         Create Dish

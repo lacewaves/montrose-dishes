@@ -201,13 +201,13 @@ div.mdl-card__supporting-text li {
   color: #424242;
 }
 
-label.check_boxes.optional, label.select.optional, label.string.optional  {
+label.check_boxes, label.select, label.string  {
   font-weight:bold;
   padding:10px, 0px, 10px, 0px;
   width:100%;
 }
 
-.check_boxes.optional.mdl-textfield__input {
+.check_boxes.mdl-textfield__input {
   width:100%;
   padding-top:10px;
   padding-bottom:10px;
@@ -227,7 +227,7 @@ span.checkbox {
   text-align: center;
 }
 
-div.input.check_boxes.optional.dish_ingredients {
+div.input.check_boxes.dish_ingredients {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
