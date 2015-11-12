@@ -15,17 +15,17 @@
     <header class="mdl-layout__header mdl-layout__header--scroll">
       <img class="mdl-layout-icon"></img>
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout__title"><h4><%= link_to root_path do %>Dishes in Montrose<% end %></h4></span>
+        <span class="mdl-layout__title"><h4><%= link_to root_path do %><%= image_tag src="DishesInMontrose.png" %><% end %></h4></span>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
           <%= link_to new_dish_path, class: "mdl-navigation__link" do %>
-            New Dish
+          + Dish
           <% end %>
           <%= link_to new_ingredient_path, class: "mdl-navigation__link" do %>
-            New Ingredient
+            + Ingredient
           <% end %>
           <%= link_to new_restaurant_path, class: "mdl-navigation__link" do %>
-            New Restaurant
+            + Restaurant
           <% end %>
         </nav>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
