@@ -8,7 +8,9 @@
 
 nikonikos = Restaurant.create name: "Niko Niko's",
                              placeId: "ChIJ-SKYT2C_QIYRY_5IDAJOEwM",
-                             cuisine: "Greek"
+                             cuisine: "Greek",
+                             latitude: 29.746524,
+                             longitude: -95.3921641
 
 spinachpita = Dish.create name: "Spinach and Feta Pita",
             cuisine: "Greek",

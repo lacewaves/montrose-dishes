@@ -35,7 +35,9 @@
           <div class="back">
             <div class="demo-card-square mdl-card mdl-shadow--2dp">
               <div class="map-placeholder">
-                <p>MAP WILL GO HERE.</p> <p>Google Maps PlaceID: <%= dish.restaurant.placeId %></p>
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB_QDEl02Ivjek4UDhfAGkb56T1uyASyEE&q=<%= dish.restaurant.latitude %>,<%= dish.restaurant.longitude %>">
+                </iframe>
               </div>
               <div class="mdl-card__title mdl-card--expand" id="back">
                 <h2 class="mdl-card__title-text" id="back">
