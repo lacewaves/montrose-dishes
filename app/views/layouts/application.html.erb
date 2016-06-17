@@ -30,9 +30,12 @@
         </nav>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                     mdl-textfield--floating-label mdl-textfield--align-right">
+                     <div class="mdl-tooltip" for="tt4">
+                     Click to search.<br /><br />Add <strong>"!"</strong> to exclude an ingredient.<br /><br /><strong>"!almonds eggs"</strong> returns dishes with eggs but without almonds. 
+                     </div>
           <label class="mdl-button mdl-js-button mdl-button--icon"
                  for="fixed-header-drawer-exp">
-            <i class="material-icons">search</i>
+                 <div id="tt4" class="icon material-icons">search</div>
           </label>
           <div class="mdl-textfield__expandable-holder">
             <%= form_tag root_path, method: :get do %>
