@@ -14,5 +14,4 @@ deploy:
   on:
     repo: lacewaves/montrose-dishes
   run:
-    - "rake db:migrate"
-    - "rake cleanup"
+    - "rake db:migrate cleanup"
