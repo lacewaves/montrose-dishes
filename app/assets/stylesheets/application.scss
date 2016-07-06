@@ -246,7 +246,7 @@ div.input.check_boxes.dish_ingredients {
 }
 
 .mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
-  width:100%;
+  width:200px;
 }
 
 .mdl-card__actions.mdl-card--border a {
@@ -268,4 +268,8 @@ iframe {
 div.mdl-tooltip {
   font-size:14px;
   padding:12px;
+}
+
+form {
+  width:100%;
 }
