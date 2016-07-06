@@ -41,6 +41,15 @@ Rails.application.routes.draw do
     #patch the form
     patch 'restaurant/:id' => 'restaurant#update'
 
+    #sign_in
+    get 'sign_in' => 'sessions#new', as: :sign_in
+    post 'sign_in' => 'sessions#create'
+    delete 'sign_in' => 'sessions#delete'
+
+    get 'registration' => 'users#new', as: :new_user
+    post 'registration' => 'users#create', as: :create_user
+
+
   # delete 'dishes/:id' => 'dishes#delete'
 
 
