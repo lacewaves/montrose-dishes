@@ -52,5 +52,6 @@ gem "refile-mini_magick"
 gem "refile-s3"
 gem "figaro"
 gem 'refile-postgres'
+gem 'bcrypt'
 
 # gem 'gmaps4rails'

@@ -1,0 +1,34 @@
+<% if @user.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <% @user.errors.full_messages.each do |msg| %>
+      <%= msg %><br>
+    <% end %>
+  </div>
+<% end %>
+<div class="formcontainer">
+  <%= form_for @user, url: create_user_path do |f| %>
+    <div class="mdl-textfield mdl-js-textfield">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "mdl-textfield__input" %>
+    </div><br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "mdl-textfield__input" %>
+    </div><br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "mdl-textfield__input" %>
+    </div><br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "mdl-textfield__input" %>
+    </div><br>
+
+    <div class="form-button-wrapper">
+      <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+    </div>
+  <% end %>
+</div>
