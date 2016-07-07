@@ -1,0 +1,163 @@
+$background-color: white;
+$emphasis-color: #448AFF;
+$emphasis-text: white;
+$normal-text:black;
+$title-color:#424242;
+
+
+.demo-card-square.mdl-card, .front, .back, .dishcontainer, .flipper {
+  width: 320px;
+  height: 475px;
+}
+
+.card-size {
+  width: 320px;
+  height: 475px;
+}
+
+.front, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.map-container, iframe, img.front-card-image {
+  width:320px;
+  height:320px;
+}
+
+.front-card-image {
+  overflow:hidden;
+}
+
+.dishcontainer {
+  background-color:$emphasis-text;
+  padding:10px;
+  z-index: 1;
+}
+
+.flip-button {
+  position:relative;
+  float:right;
+  right:0px;
+  bottom:0px;
+  padding:5px;
+  z-index: 5;
+}
+
+.container.click .flipper, .container.flip .flipper  {
+  transform: rotateY(180deg);
+}
+
+.container {
+  perspective: 1000px;
+  @extend .card-size;
+}
+
+.flipper {
+  	transition: 0.6s;
+  	transform-style: preserve-3d;
+  	position: relative;
+  }
+
+.dishcontainer .front, .dishcontainer .back {
+  background-color: $background-color;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dishcontainer .front {
+  @extend .card-size;
+  z-index: 2;
+  transform: rotateY(0deg);
+  }
+
+.dishcontainer .back {
+  @extend .card-size;
+  transform: rotateY(180deg);
+}
+
+.container:hover .back {
+   z-index: 6;
+}
+
+h2#front.mdl-card__title-text {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-right:4px;
+  font-size:28px;
+  overflow:hidden;
+  text-align:right;
+}
+
+#restaurant-name-text-front {
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-right:4px;
+  font-size:24px;
+  text-align: right;
+}
+
+h2#back.mdl-card__title-text {
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size:20px;
+  display:none;
+}
+
+#restaurant-name-text-back {
+  display:none;
+}
+
+div#front.mdl-card__title, div#back.mdl-card__title {
+  padding: 0px 8px 2px 8px;
+  display:flex;
+  flex-direction: column;
+}
+
+div#back.mdl-card__title  {
+  flex-wrap:wrap;
+}
+
+div.mdl-card__title.mdl-card--expand {
+  padding: 4px 8px 4px 8px;
+}
+
+div.mdl-card__supporting-text {
+  margin:0;
+  padding:4px;
+}
+
+div.mdl-card__supporting-text ul, li {
+  margin:0px;
+  padding:2px 4px 2px 4px;
+  line-height:16px;
+  font-size:16px;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+div.mdl-card__supporting-text li {
+  padding:4px;
+  margin:4px;
+  background-color: $emphasis-color;
+  color:$emphasis-text;
+  border-radius: 1px;
+}
+
+.mdl-card__actions.mdl-card--border a {
+  text-decoration: none;
+}
+
+div.mdl-card__actions.mdl-card--border {
+  padding-top:2px;
+  padding-bottom:2px;
+  margin-top:2px;
+  margin-bottom:2px;
+}

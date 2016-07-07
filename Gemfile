@@ -35,6 +35,7 @@ gem 'pg_search'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "minitest-rails-capybara"
 end
 
 group :development do
@@ -53,5 +54,7 @@ gem "refile-s3"
 gem "figaro"
 gem 'refile-postgres'
 gem 'bcrypt'
+
+gem "minitest-rails"
 
 # gem 'gmaps4rails'

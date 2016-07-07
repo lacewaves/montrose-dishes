@@ -1,3 +1,17 @@
+@import "_normalize.scss";
+@import "_flipcards.scss";
+@import "_forms.scss";
+
+$background-color: white;
+$emphasis-color: #448AFF;
+$emphasis-text: white;
+$normal-text:black;
+$title-color:#424242;
+
+.user-greeting {
+  color:$emphasis-text;
+}
+
 .body-wrapper {
   margin:10px;
   padding:10px;
@@ -7,269 +21,11 @@
   justify-content: center;
 }
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 475px;
-}
-
-.mdl-layout__title {
-  padding-right:5px;
-}
-
 .mdl-navigation__link {
   text-transform:uppercase;
-}
-
-.map-placeholder {
-  width:320px;
-  height:320px;
-}
-
-img.front-card-image {
-  width:320px;
-  height:320px;
-}
-
-.front-card-image {
-  overflow:hidden;
-}
-
-.dishcontainer {
-  width:320px;
-  height:475px;
-  background-color:white;
-  padding:10px;
-  z-index: 1;
-}
-
-.flip-button {
-  position:relative;
-  float:right;
-  right:0px;
-  bottom:0px;
-  padding:5px;
-  z-index: 5;
-}
-
-.container.click .flipper, .container.flip .flipper  {
-  transform: rotateY(180deg);
-}
-
-.card-size {
-  width: 320px;
-  height: 475px;
-}
-
-.front, .back {
-	position: absolute;
-	top: 0;
-	left: 0;
-  width:320px;
-  height:475px;
-}
-
-.container {
-  perspective: 1000px;
-  @extend .card-size;
-}
-
-.flipper {
-  	transition: 0.6s;
-  	transform-style: preserve-3d;
-  	position: relative;
-    width: 320px;
-    height: 475px;
-  }
-
-.dishcontainer .front {
-  background-color: white;
-  @extend .card-size;
-  z-index: 2;
-  transform: rotateY(0deg);
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 475px;
-  width: 320px;
-  background-color: white;
-  z-index: 2;
-  }
-
-.dishcontainer .back {
-  background-color: white;
-  @extend .card-size;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
-  height: 475px;
-  width: 320px;
-  transform: rotateY(180deg);
-}
-
-.container:hover .back {
-   z-index: 6;
-}
-
-h2#front.mdl-card__title-text {
-  padding-top:8px;
-  padding-bottom:8px;
-  padding-right:4px;
-  font-size:28px;
-  overflow:hidden;
-  text-align:right;
-}
-
-#restaurant-name-text-front {
-  padding-top:4px;
-  padding-bottom:4px;
-  padding-right:4px;
-  font-size:24px;
-  text-align: right;
-}
-
-h2#back.mdl-card__title-text {
-  padding-top:4px;
-  padding-bottom:4px;
-  font-size:20px;
-  display:none;
-}
-
-#restaurant-name-text-back {
-  font-size:18px;
-  display:none;
-}
-
-div#front.mdl-card__title {
-  padding-left:8px;
-  padding-top:0px;
-  padding-bottom:2px;
-  padding-right:8px;
-  display:flex;
-  flex-direction: column;
-}
-
-div#back.mdl-card__title  {
-  padding-left:8px;
-  padding-top:0px;
-  padding-bottom:2px;
-  padding-right:8px;
-  display:flex;
-  flex-direction: column;
-  flex-wrap:wrap;
-}
-
-div.mdl-card__title.mdl-card--expand {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left:8px;
-  padding-right:8px;
-}
-
-div.mdl-card__supporting-text {
-  margin:0;
-  padding-top:4px;
-  padding-bottom:4px;
-  padding-left:4px;
-  padding-right:4px;
-}
-
-div.mdl-card__supporting-text ul, li {
-  margin:0px;
-  padding-left:4px;
-  padding-right:4px;
-  padding-top:2px;
-  padding-bottom:2px;
-  line-height:16px;
-  font-size:16px;
-  align-content: space-between;
-  align-items: center;
-  justify-content: center;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-div.mdl-card__supporting-text li {
-  padding:4px;
-  margin:4px;
-  background-color: #448AFF;
-  color:#ffffff;
-  border-radius: 1px;
-}
-
-.mdl-layout__title a {
-  text-decoration: none;
-  color: #424242;
-}
-
-label.check_boxes, label.select, label.string  {
-  font-weight:bold;
-  padding:10px, 0px, 10px, 0px;
-  width:100%;
-}
-
-.check_boxes.mdl-textfield__input {
-  width:100%;
-  padding-top:10px;
-  padding-bottom:10px;
-  padding-left:0;
-  padding-right:0;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-.checkbox label {
-  width:50%;
-  text-align:center;
-}
-
-span.checkbox {
-  width:50%;
-  text-align: center;
-}
-
-div.input.check_boxes.dish_ingredients {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width:100%;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-.form-button-wrapper {
-  margin-top:30px;
-  padding-top:5px;
-}
-
-.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
-  width:200px;
-}
-
-.mdl-card__actions.mdl-card--border a {
-  text-decoration: none;
-}
-
-div.mdl-card__actions.mdl-card--border {
-  padding-top:2px;
-  padding-bottom:2px;
-  margin-top:2px;
-  margin-bottom:2px;
-}
-
-iframe {
-  height: 320px;
-  width: 320px;
 }
 
 div.mdl-tooltip {
   font-size:14px;
   padding:12px;
-}
-
-form {
-  width:100%;
 }

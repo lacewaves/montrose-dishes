@@ -1,0 +1,53 @@
+$background-color: white;
+$emphasis-color: #448AFF;
+$emphasis-text: white;
+$normal-text:black;
+$title-color:#424242;
+
+form {
+  width:100%;
+}
+
+label.check_boxes, label.select, label.string  {
+  font-weight:bold;
+  padding:10px, 0px, 10px, 0px;
+  width:100%;
+}
+
+.check_boxes.mdl-textfield__input {
+  width:100%;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:0;
+  padding-right:0;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.checkbox label {
+  width:50%;
+  text-align:center;
+}
+
+span.checkbox {
+  width:50%;
+  text-align: center;
+}
+
+div.input.check_boxes.dish_ingredients {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.form-button-wrapper {
+  margin-top:30px;
+  padding-top:5px;
+}
+
+.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
+  width:200px;
+}

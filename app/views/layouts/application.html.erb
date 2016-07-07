@@ -40,7 +40,7 @@
         </div>
         <div class="mdl-layout-spacer"></div>
         <% if @current_user %>
-          Hi <%= @current_user.username %>.
+          <strong class="user-greeting">Hi,&nbsp;&nbsp;<%= @current_user.username.upcase %></strong>
           <nav class="mdl-navigation">
             <%= link_to "+ Dish", new_dish_path, class: "mdl-navigation__link" %>
             <%= link_to "+ Ingredient", new_ingredient_path, class: "mdl-navigation__link" %>
@@ -58,7 +58,6 @@
         <div class="page-content">
           <div class="body-wrapper">
             <%= yield %>
-            <div id="map"></div>
 
           </div>
         </div>
