@@ -1,8 +1,10 @@
-![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/DishesInMontrose.png)
 [![Build Status](https://travis-ci.org/lacewaves/montrose-dishes.svg?branch=master)](https://travis-ci.org/lacewaves/montrose-dishes)
 
-#Dishes in Montrose
+![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/DishesInMontrose.png)
+
 ![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/app_preview.png)
+
+##Dishes in Montrose 
 
 Montrose Dishes is an open source app that allows users to search for dishes at local restaurants based on ingredient information.
 
