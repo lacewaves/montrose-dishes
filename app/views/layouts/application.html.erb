@@ -11,69 +11,67 @@
 
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <img class="mdl-layout-icon"></img>
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout__title">
-          <h4>
+  <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
             <%= link_to root_path do %>
-            <%= image_tag src="DishesInMontrose.png" %>
+              <%= image_tag src="DishesInMontrose.png" %>
             <% end %>
-          </h4>
-        </span>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                    mdl-textfield--floating-label mdl-textfield--align-right">
-                     <div class="mdl-tooltip" for="tt4">
-                     Click to search.<br /><br />Add <strong>"!"</strong> to exclude an ingredient.<br /><br /><strong>"!almonds eggs"</strong> returns dishes with eggs but without almonds.
-                     </div>
-          <label class="mdl-button mdl-js-button mdl-button--icon"
-                 for="fixed-header-drawer-exp">
-                 <div id="tt4" class="icon material-icons">search</div>
-          </label>
-          <div class="mdl-textfield__expandable-holder">
+          <div class="searchwrapper">
             <%= form_tag root_path, method: :get do %>
-            <input class="mdl-textfield__input" type="text" name="search_text"
-                   id="fixed-header-drawer-exp">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                <div class="mdl-tooltip" for="tt4">
+                Search tips:<br /><br />Add <strong>"!"</strong> to exclude an ingredient.<br /><br /><strong>"!almonds eggs"</strong> returns dishes with eggs but without almonds.
+                </div>
+                <div id="tt4">
+                  <button type="Submit" class="mdl-button mdl-js-button mdl-button--icon">
+                    <div class="icon material-icons">search</div>
+                  </button>
+                </div>
+                <input class="mdl-textfield__input" type="text" name="search_text" id="search_text">
+              </div>
             <% end %>
           </div>
-        </div>
-        <div class="mdl-layout-spacer"></div>
-        <% if @current_user %>
-          <strong class="user-greeting">Hi,&nbsp;&nbsp;<%= @current_user.username.upcase %></strong>
+          <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation">
-            <%= link_to "+ Dish", new_dish_path, class: "mdl-navigation__link" %>
-            <%= link_to "+ Ingredient", new_ingredient_path, class: "mdl-navigation__link" %>
-            <%= link_to "+ Restaurant", new_restaurant_path, class: "mdl-navigation__link" %>
-            <%= link_to 'Sign Out', sign_in_path, method: :delete, class: "mdl-navigation__link" %>
+            <% if @current_user %>
+              <strong class="user-greeting">Hi,&nbsp;&nbsp;<%= @current_user.username.upcase %></strong>
+              <%= link_to "+ Dish", new_dish_path, class: "mdl-navigation__link" %>
+              <%= link_to "+ Ingredient", new_ingredient_path, class: "mdl-navigation__link" %>
+              <%= link_to "+ Restaurant", new_restaurant_path, class: "mdl-navigation__link" %>
+              <%= link_to 'Sign Out', sign_in_path, method: :delete, class: "mdl-navigation__link" %>
+            <% else %>
+              <%= link_to 'Sign In', sign_in_path, class: "mdl-navigation__link" %>
+            <% end %>
           </nav>
-        <% else %>
-          <nav class="mdl-navigation">
-            <%= link_to 'Sign In', sign_in_path, class: "mdl-navigation__link" %>
-          </nav>
-        <% end %>
-        </div>
-    </header>
-    <% if notice %>
-      <div class="alert alert-info" role="alert">
-        <%= notice %>
-      </div>
-    <% end %>
-    <% if alert %>
-      <div class="alert alert-danger" role="alert">
-        <%= alert %>
-      </div>
-    <% end %>
-    <main class="mdl-layout__content">
-        <div class="page-content">
-          <div class="body-wrapper">
-
-            <%= yield %>
-
           </div>
+      </header>
+      <% if notice %>
+        <div class="alert alert-info" role="alert">
+          <%= notice %>
         </div>
-    </main>
-</div>
-
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger" role="alert">
+          <%= alert %>
+        </div>
+      <% end %>
+      <main class="mdl-layout__content">
+          <div class="page-content">
+            <div class="body-wrapper">
+              <%= yield %>
+            </div>
+          </div>
+      </main>
 </body>
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">Created by <%= link_to "lacewaves", "https://github.com/lacewaves" %> | <%= link_to "MIT License", "http://choosealicense.com/licenses/mit/" %> &copy; 2015</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><%= link_to "Help", "#" %></li>
+      <li><%= link_to "Privacy & Terms", "#" %></li>
+    </ul>
+  </div>
+</footer>
+</div>
 </html>
