@@ -43,7 +43,7 @@ class DishesController < ApplicationController
   def delete
     @dish = Dish.find params[:id]
     @dish.destroy
-    redirect_to rooth_path
+    redirect_to root_path
   end
 
   def upvote

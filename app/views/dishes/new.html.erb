@@ -1,6 +1,6 @@
 <div class="formcontainer">
 <%= simple_form_for @dish  do |f| %>
-  <div class="mdl-textfield mdl-js-textfield">
+  <div class="mdl-textfield mdl-js-textfield" id="#formwrapper">
     <%= f.input :name, label: 'Dish Name', required: true, input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :cuisine, label: "Cuisine", required: true, input_html: {class: "mdl-textfield__input"} %><br>
     <%= f.input :dish_type, label: "What kind of dish is it?", required: true, as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>

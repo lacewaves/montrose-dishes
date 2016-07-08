@@ -1,16 +1,16 @@
 <div class="formcontainer">
   <%= simple_form_for @restaurant do |f| %>
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield mdl-js-textfield" id="#formwrapper">
       <%= f.input :name, label: "Restaurant Name", required: true, input_html: {class: "mdl-textfield__input"} %><br>
       <%= f.input :cuisine, label: "Cuisine?", required: true, as: :select, collection: ["Greek", "Italian", "American", "Cajun", "Canadian", "Chinese", "Japanese", "Vietnamese", "Indian", "Thai", "French", "Belgian", "Circus Clown", "Postal Service"], input_html: {class: "mdl-textfield__input"} %><br>
       <%= f.input :placeId, label: "Google Maps PlaceId?", required: true, input_html: {class: "mdl-textfield__input"} %><br>
       <%= f.input :latitude, label: "Google Maps Latitude?", input_html: {class: "mdl-textfield__input"} %><br>
       <%= f.input :longitude, label: "Google Maps Longitude?", input_html: {class: "mdl-textfield__input"} %><br>
-      <div class="form-button-wrapper">
-        <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Update Restaurant
-        </button>
-      </div>
+    </div>
+    <div class="form-button-wrapper">
+      <%= submit_tag "Submit", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"%>
+      or
+      <%= link_to 'Delete', "/restaurants/#{@restaurant.id}", method: :delete, data: {confirm: "Are you sure?"}, class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
     </div>
   <% end %>
 </div>

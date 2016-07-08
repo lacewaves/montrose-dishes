@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
   root 'dishes#index' #root_path
     get 'dishes/new' => 'dishes#new', as: :new_dish
+    get '/help' => 'welcome#help'
+    get '/privacy' => 'welcome#privacy'
 
     # create a dish
     get 'dishes/:id' => 'dishes#detail', as: :dish

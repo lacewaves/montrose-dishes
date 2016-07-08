@@ -1,18 +1,18 @@
 <div class="formcontainer">
-<%= simple_form_for @dish  do |f| %>
+  <%= simple_form_for @dish  do |f| %>
 
-  <div class="mdl-textfield mdl-js-textfield">
-    <%= f.input :name, label: 'Dish Name', required: true, input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :cuisine, label: "Cuisine", required: true, input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.input :dish_type, label: "What kind of dish is it?", required: true, as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.association :ingredients, required: true, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
-    <%= f.attachment_field :dish_image, required: true, class: "mdl-textfield__input" %><br>
-    <div class="form-button-wrapper">
-      <button type="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Update Dish
-      </button>
+    <div class="mdl-textfield mdl-js-textfield" id="#formwrapper">
+      <%= f.input :name, label: 'Dish Name', required: true, input_html: {class: "mdl-textfield__input"} %><br>
+      <%= f.input :cuisine, label: "Cuisine", required: true, input_html: {class: "mdl-textfield__input"} %><br>
+      <%= f.input :dish_type, label: "What kind of dish is it?", required: true, as: :select, collection: ["Breakfast", "Lunch", "Dinner", "Snack", "Appetizer", "Brunch", "Drink", "Dessert"], input_html: {class: "mdl-textfield__input"} %><br>
+      <%= f.association :ingredients, required: true, as: :check_boxes, input_html: {class: "mdl-textfield__input"} %><br>
+      <label class="string">Image</label>
+      <%= f.attachment_field :dish_image, required: true, class: "mdl-textfield__input" %><br>
     </div>
-  </div>
-
-<% end %>
+    <div class="form-button-wrapper">
+      <%= submit_tag "Submit", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+      or
+      <%= link_to 'Delete', "/dishes/#{@dish.id}", method: :delete, data: {confirm: "Are you sure?"}, class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+    </div>
+  <% end %>
 </div>
