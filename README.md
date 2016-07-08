@@ -2,15 +2,15 @@
 
 ![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/DishesInMontrose.png)
 
+##About
+
+Montrose Dishes is an open source app that allows users to upload and search for dishes at local restaurants based on ingredient information.
+
 ![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/app_preview.png)
-
-##Dishes in Montrose 
-
-Montrose Dishes is an open source app that allows users to search for dishes at local restaurants based on ingredient information.
 
 Search returns dishes on cards that include an image, upvotes and dish information and flip to reveal a map with a pin tied to the restaurant's Google Maps place ID and clickable ingredient buttons that return a search query for dishes containing that ingredient.
 
-##Searching
+##How to Search
 ![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/search_example.png)
 
 To exclude an ingredient from a search type "!" before the ingredient name. For example,
