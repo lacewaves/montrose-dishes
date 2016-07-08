@@ -69,3 +69,11 @@ footer.mdl-mini-footer {
   padding-left:10vw;
   padding-right:10vw;
 }
+
+.searchwrapper button.mdl-button, .body-wrapper button.mdl-button {
+  background-color:WhiteSmoke;
+}
+
+.searchwrapper button.mdl-button:hover, .body-wrapper button.mdl-button:hover {
+  background-color:#999999;
+}
