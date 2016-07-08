@@ -54,9 +54,20 @@
         <% end %>
         </div>
     </header>
+    <% if notice %>
+      <div class="alert alert-info" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+      </div>
+    <% end %>
     <main class="mdl-layout__content">
         <div class="page-content">
           <div class="body-wrapper">
+
             <%= yield %>
 
           </div>

@@ -7,6 +7,7 @@ $emphasis-color: #448AFF;
 $emphasis-text: white;
 $normal-text:black;
 $title-color:#424242;
+$border-color:#424242;
 
 .user-greeting {
   color:$emphasis-text;
@@ -28,4 +29,23 @@ $title-color:#424242;
 div.mdl-tooltip {
   font-size:14px;
   padding:12px;
+}
+
+.alert-info, .alert-danger {
+  width:100%;
+  text-align: center;
+  font-weight:bold;
+  border-top:1px solid $border-color;
+  border-bottom:1px solid $border-color;
+  padding:4px;
+}
+
+.alert-info {
+  background-color:$emphasis-color;
+  color:$emphasis-text;
+}
+
+.alert-danger {
+  background-color:#818181;
+  color:red;
 }
