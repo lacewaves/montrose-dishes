@@ -77,3 +77,24 @@ footer.mdl-mini-footer {
 .searchwrapper button.mdl-button:hover, .body-wrapper button.mdl-button:hover {
   background-color:#999999;
 }
+
+@media screen and (max-width:1024px) {
+	#header {
+		display:flex;
+  }
+ }
+
+@media screen and (max-width:760px) {
+	#header {
+		display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:20vh;
+  }
+  .logo {
+    display:none;
+  }
+  .mdl-navigation {
+    font-size:12px;
+  }
+ }

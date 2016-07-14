@@ -12,10 +12,10 @@
 </head>
 <body>
   <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
+      <header class="mdl-layout__header" id="header">
+        <div class="mdl-layout__header-row" id="header">
             <%= link_to root_path do %>
-              <%= image_tag src="DishesInMontrose.png" %>
+              <%= image_tag src="DishesInMontrose.png", class: "logo" %>
             <% end %>
           <div class="searchwrapper">
             <%= form_tag root_path, method: :get do %>
