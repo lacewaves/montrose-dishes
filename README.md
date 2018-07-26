@@ -4,7 +4,7 @@
 
 ##About
 
-Montrose Dishes is an open source app that allows users to upload and search for dishes at local restaurants based on ingredient information.
+Montrose Dishes is an open source app that allows users to upload and search for dishes at local restaurants based on ingredient information. You can view a working demo at: http://still-mesa-4051.herokuapp.com/
 
 ![alt tag](https://raw.githubusercontent.com/lacewaves/montrose-dishes/master/app/assets/images/app_preview.png)
 
